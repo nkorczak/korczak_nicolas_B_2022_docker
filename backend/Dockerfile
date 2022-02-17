@@ -6,6 +6,8 @@ COPY package*.json ./
 
 RUN apk update
 
-RUN npm install
+RUN yarn install --production
+
+# RUN npm install
 
 EXPOSE 8001
