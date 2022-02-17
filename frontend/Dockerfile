@@ -1,13 +1,7 @@
-FROM alpine:latest
-
+FROM node:14-alpine
 WORKDIR /app
-
 ENV PATH /app/node_modules/.bin:$PATH
-
 COPY package*.json ./
-
-RUN apk update
-
 RUN npm install
-
-EXPOSE 8000
+EXPOSE 80
+CMD ["npm", "start"]
