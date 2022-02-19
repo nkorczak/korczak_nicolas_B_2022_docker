@@ -1,9 +1,7 @@
 FROM node:14-alpine
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
-COPY package*.json ./
-RUN npm cache clean --force
-RUN npm install
 COPY . .
+RUN npm install
 EXPOSE 3000
 CMD ["npm", "start"]
