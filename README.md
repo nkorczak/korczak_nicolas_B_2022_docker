@@ -69,24 +69,24 @@ Sommaire :
 version: "3"
 services:
 
-  web:
+  frontend:
     build: ./frontend
     depends_on:
-      - api
+      - backend
     ports:
       - "8081:8081"
     networks:
-      - backend
-         
-  api:
+      - backend-net
+          
+  backend:
     build: ./backend
     depends_on:
       - mongo
     ports:
       - "36150:36150"
     networks: 
-     - backend
-    
+     - backend-net
+  
   mongo:
     image: mongo
     restart: always
@@ -96,13 +96,14 @@ services:
       MONGODB_INITDB_ROOT_USERNAME: nico
       MONGODB_INITDB_ROOT_PASSWORD: korczak
     networks: 
-     - backend
+     - backend-net
 
 networks:
-  backend:
+  backend-net:
 
 volumes: 
   mongo:
+
 ```
 Pour la "version", il nous faut choisir la version de docker-compose en fonction de la version du moteur docker
 
