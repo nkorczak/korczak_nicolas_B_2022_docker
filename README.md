@@ -13,7 +13,7 @@ Sommaire :
 2: WORKDIR /app
 3: COPY . .
 4: RUN npm install
-5: EXPOSE 8080
+5: EXPOSE 36150
 6: CMD ["node", "server.js"]
 ```
 
@@ -41,7 +41,7 @@ Sommaire :
 3: ENV PATH /app/node_modules/.bin:$PATH
 4: COPY . .
 5: RUN npm install
-6: EXPOSE 3000
+6: EXPOSE 8081
 7: CMD ["npm", "start"]
 ```
 
@@ -74,7 +74,7 @@ services:
     depends_on:
       - api
     ports:
-      - "3000:3000"
+      - "8081:8081"
     networks:
       - backend
          
@@ -83,7 +83,7 @@ services:
     depends_on:
       - mongo
     ports:
-      - "8080:8080"
+      - "36150:36150"
     networks: 
      - backend
     
@@ -95,7 +95,6 @@ services:
     environment: 
       MONGODB_INITDB_ROOT_USERNAME: nico
       MONGODB_INITDB_ROOT_PASSWORD: korczak
-    
     networks: 
      - backend
 
@@ -120,9 +119,3 @@ Pour cela j'ai donc définis 3 applications :
 De plus, je définis donc mes "networks" cela définit le réseau par défaut de l'application
 
 Enfin, la aprtie volume, sert à déclarer le volume qui nous servira à stocker les données de la base de données
-
-
-
-
-
-
