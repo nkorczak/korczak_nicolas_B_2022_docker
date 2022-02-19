@@ -110,12 +110,15 @@ Pour les "services", les différents services définis sont les différentes app
 
 Pour cela j'ai donc définis 3 applications :
 
---> Une web pour le front
+--> Un service frontend pour le front
 
---> Une api pour le back
+--> Un service backend pour le back
 
---> Une mongo pour la base de données
+--> Un service mongo pour la base de données
 
 De plus, je définis donc mes "networks" cela définit le réseau par défaut de l'application
 
-Enfin, la aprtie volume, sert à déclarer le volume qui nous servira à stocker les données de la base de données
+Enfin, la partie volume, sert à déclarer le volume qui nous servira à stocker les données de la base de données
+
+
+**_Pour aller plus loin, nous avons modifié le port par défaut de l'application "ReactJS" sur le port 8081 et nous avons modifié le port d'accès au backend sur le 36150._**
