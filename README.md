@@ -103,7 +103,6 @@ networks:
 
 volumes: 
   mongo:
-
 ```
 Pour la "version", il nous faut choisir la version de docker-compose en fonction de la version du moteur docker
 
