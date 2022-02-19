@@ -36,13 +36,13 @@ Sommaire :
 **Création du Dockerfile dans la partie "frontend"**
 
 ```
-1:FROM node:14-alpine
-2:WORKDIR /app
-3:ENV PATH /app/node_modules/.bin:$PATH
-4:COPY . .
-5:RUN npm install
-6:EXPOSE 3000
-7:CMD ["npm", "start"]
+1: FROM node:14-alpine
+2: WORKDIR /app
+3: ENV PATH /app/node_modules/.bin:$PATH
+4: COPY . .
+5: RUN npm install
+6: EXPOSE 3000
+7: CMD ["npm", "start"]
 ```
 
 1: Le "FROM" définit l'image de base qui sera utilisée par les instructions suivantes
