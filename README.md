@@ -19,15 +19,15 @@ Sommaire :
 
 1: Le "FROM" définit l'image de base qui sera utilisée par les instructions suivantes
 
-2: Le "WORKDIR" définit le repertoire de travail qui sera utilisé
+2: Le "WORKDIR" définit le répertoire de travail qui sera utilisé
 
 3: Le "COPY" permet de copier les fichiers de notre machine locale vers le conteneur docker
 
-4: Le "RUN" éxécute des commandes pendnat la création de l'image
+4: Le "RUN" exécute des commandes pendant la création de l'image
 
 5: Le "EXPOSE" permet d'exposer un port 
 
-6: Le "CMD" permet de lancer les commandes par défaut lors du démarrage du docker
+6: Le "CMD" permet de lancer les commandes par défaut lors du démarrage du conteneur docker
 
 
 
@@ -47,17 +47,17 @@ Sommaire :
 
 1: Le "FROM" définit l'image de base qui sera utilisée par les instructions suivantes
 
-2: Le "WORKDIR" définit le repertoire de travail qui sera utilisé
+2: Le "WORKDIR" définit le répertoire de travail qui sera utilisé
 
-3: Le "ENV" définit les varaiables d'environnement utilisables dans le conteneur docker
+3: Le "ENV" définit les variables d'environnement utilisable dans le conteneur docker
 
 4: Le "COPY" permet de copier les fichiers de notre machine locale vers le conteneur docker
 
-5: Le "RUN" éxécute des commandes pendnat la création de l'image
+5: Le "RUN" exécute des commandes pendant la création de l'image
 
 6: Le "EXPOSE" permet d'exposer un port 
 
-7: Le "CMD" permet de lancer les commandes par défaut lors du démarrage du docker
+7: Le "CMD" permet de lancer les commandes par défaut lors du démarrage du conteneur docker
 
 
 
@@ -108,7 +108,7 @@ Pour la "version", il nous faut choisir la version de docker-compose en fonction
 
 Pour les "services", les différents services définis sont les différentes applications du conteneur
 
-Pour cela j'ai donc définis 3 applications :
+Pour cela j'ai donc défini 3 applications :
 
 --> Un service frontend pour le front
 
@@ -116,9 +116,9 @@ Pour cela j'ai donc définis 3 applications :
 
 --> Un service mongo pour la base de données
 
-De plus, je définis donc mes "networks" cela définit le réseau par défaut de l'application
+De plus, je mets en place mes "networks" cela définit le réseau par défaut de l'application
 
-Enfin, la partie volume, sert à déclarer le volume qui nous servira à stocker les données de la base de données
+Enfin, la partie volume permet de déclarer le volume qui nous servira à stocker les données de la base de données
 
 
 **_Pour aller plus loin, nous avons modifié le port par défaut de l'application "ReactJS" sur le port 8081 et nous avons modifié le port d'accès au backend sur le 36150._**
