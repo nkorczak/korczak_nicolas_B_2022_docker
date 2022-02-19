@@ -30,8 +30,7 @@ services:
     environment: 
       MONGODB_INITDB_ROOT_USERNAME: nico
       MONGODB_INITDB_ROOT_PASSWORD: korczak
-    ports:
-     - 27017:27017
+    
     networks: 
      - backend
 
