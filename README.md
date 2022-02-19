@@ -9,12 +9,12 @@ Sommaire :
 **Création du Dockerfile dans la partie "backend"**
 
 ```
-1:FROM node:10-alpine
-2:WORKDIR /app
-3:COPY . .
-4:RUN npm install
-5:EXPOSE 8080
-6:CMD ["node", "server.js"]
+1: FROM node:10-alpine
+2: WORKDIR /app
+3: COPY . .
+4: RUN npm install
+5: EXPOSE 8080
+6: CMD ["node", "server.js"]
 ```
 
 1: Le "FROM" définit l'image de base qui sera utilisée par les instructions suivantes
